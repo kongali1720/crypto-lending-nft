@@ -1,12 +1,9 @@
-# crypto-lending-nft# Crypto Lending dengan Garansi NFT
-
+# Crypto Lending NFT
+Project ini adalah contoh sederhana smart contract untuk sistem lending berbasis NFT.
 Platform pinjaman crypto yang memungkinkan peminjam menggunakan NFT sebagai jaminan.  
 Sistem ini menggunakan smart contract untuk memastikan NFT yang dijaminkan aman dan pinjaman diterima dengan transparan dan otomatis.
 
 ---
-# Crypto Lending NFT
-
-Project ini adalah contoh sederhana smart contract untuk sistem lending berbasis NFT.
 
 ## Struktur
 
@@ -14,6 +11,8 @@ Project ini adalah contoh sederhana smart contract untuk sistem lending berbasis
 - `scripts/deploy.js` — skrip deploy kontrak menggunakan Hardhat.
 - `test/NFTLending-test.js` — contoh unit test menggunakan Mocha & Chai.
 - `hardhat.config.js` — konfigurasi Hardhat standar.
+
+---
 
 ## Setup
 
@@ -23,6 +22,7 @@ Project ini adalah contoh sederhana smart contract untuk sistem lending berbasis
 npm install --save-dev hardhat @nomiclabs/hardhat-waffle @nomiclabs/hardhat-ethers ethers chai
 npm install @openzeppelin/contracts
 
+---
     Compile kontrak:
 
 npx hardhat compile
@@ -54,8 +54,6 @@ npx hardhat run scripts/deploy.js --network hardhat
 4. Setelah lunas, NFT dilepaskan kembali ke peminjam.  
 5. Jika gagal bayar, NFT bisa dijual oleh pemberi pinjaman sesuai aturan.
 
----
-
 ## Teknologi
 
 - Solidity (Smart Contract Ethereum)  
@@ -63,12 +61,6 @@ npx hardhat run scripts/deploy.js --network hardhat
 - Hardhat / Truffle (Development & Testing)  
 - React / Next.js (Frontend, opsional)  
 - IPFS (Untuk metadata NFT, opsional)
-
----
-
-## Instalasi & Penggunaan
-
-*Masih dalam pengembangan, stay tuned!*
 
 ---
 
@@ -82,13 +74,6 @@ Silakan buat pull request atau issues jika ada fitur atau perbaikan.
 ## Lisensi
 
 MIT License
-
----
-
-## Kontak
-
-- Email: kongali1720@gmail.com  
-- GitHub: [kongali1720](https://github.com/kongali1720)
 
 ---
 
