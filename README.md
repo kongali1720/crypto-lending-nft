@@ -4,6 +4,38 @@ Platform pinjaman crypto yang memungkinkan peminjam menggunakan NFT sebagai jami
 Sistem ini menggunakan smart contract untuk memastikan NFT yang dijaminkan aman dan pinjaman diterima dengan transparan dan otomatis.
 
 ---
+# Crypto Lending NFT
+
+Project ini adalah contoh sederhana smart contract untuk sistem lending berbasis NFT.
+
+## Struktur
+
+- `contracts/NFTLending.sol` — smart contract utama untuk lending NFT.
+- `scripts/deploy.js` — skrip deploy kontrak menggunakan Hardhat.
+- `test/NFTLending-test.js` — contoh unit test menggunakan Mocha & Chai.
+- `hardhat.config.js` — konfigurasi Hardhat standar.
+
+## Setup
+
+1. Install dependencies:
+
+```bash
+npm install --save-dev hardhat @nomiclabs/hardhat-waffle @nomiclabs/hardhat-ethers ethers chai
+npm install @openzeppelin/contracts
+
+    Compile kontrak:
+
+npx hardhat compile
+
+    Jalankan test:
+
+npx hardhat test
+
+    Deploy ke jaringan lokal:
+
+npx hardhat run scripts/deploy.js --network hardhat
+
+---
 
 ## Fitur
 
