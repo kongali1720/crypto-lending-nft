@@ -1,80 +1,86 @@
-# Crypto Lending NFT
-Project ini adalah contoh sederhana smart contract untuk sistem lending berbasis NFT.
-Platform pinjaman crypto yang memungkinkan peminjam menggunakan NFT sebagai jaminan.  
-Sistem ini menggunakan smart contract untuk memastikan NFT yang dijaminkan aman dan pinjaman diterima dengan transparan dan otomatis.
+# 🖼️ Crypto Lending NFT
 
----
+Smart contract ini memungkinkan pengguna untuk menjaminkan NFT mereka untuk pinjaman berbasis Ethereum.
 
-## Struktur
+## 📁 Struktur Proyek
 
-- `contracts/NFTLending.sol` — smart contract utama untuk lending NFT.
-- `scripts/deploy.js` — skrip deploy kontrak menggunakan Hardhat.
-- `test/NFTLending-test.js` — contoh unit test menggunakan Mocha & Chai.
-- `hardhat.config.js` — konfigurasi Hardhat standar.
+```
+crypto-lending-nft/
+├── contracts/
+│   └── NFTLending.sol
+├── scripts/
+│   └── deploy.js
+├── test/
+│   └── NFTLending-test.js
+├── hardhat.config.js
+└── README.md
+```
 
----
+## 🔧 Fitur
 
-## Setup
+- 📌 Pengguna dapat menggadaikan NFT sebagai jaminan pinjaman.
+- 🔐 NFT akan disimpan sementara di smart contract.
+- 💰 Pengguna dapat menebus NFT setelah melunasi pinjaman.
+- 📤 Event log untuk monitoring pinjaman.
 
-1. Install dependencies:
+## 🚀 Setup dan Penggunaan
+
+### 1. Instalasi Dependency
 
 ```bash
 npm install --save-dev hardhat @nomiclabs/hardhat-waffle @nomiclabs/hardhat-ethers ethers chai
 npm install @openzeppelin/contracts
+```
 
----
-    Compile kontrak:
+### 2. Kompilasi Kontrak
 
+```bash
 npx hardhat compile
+```
 
-    Jalankan test:
+### 3. Menjalankan Test
 
+```bash
 npx hardhat test
+```
 
-    Deploy ke jaringan lokal:
+### 4. Deploy Kontrak
 
+Deploy ke jaringan lokal:
+
+```bash
 npx hardhat run scripts/deploy.js --network hardhat
+```
 
----
+Atau ke testnet Rinkeby (jangan lupa ganti `YOUR_INFURA_PROJECT_ID` dan `YOUR_PRIVATE_KEY`):
 
-## Fitur
+```js
+rinkeby: {
+  url: "https://rinkeby.infura.io/v3/YOUR_INFURA_PROJECT_ID",
+  accounts: ["YOUR_PRIVATE_KEY"]
+}
+```
 
-- Pinjaman crypto dengan NFT sebagai jaminan  
-- Smart contract mengelola transaksi pinjaman dan pengembalian  
-- Otomatisasi penguncian dan pelepasan NFT saat pinjaman aktif dan lunas  
-- Transparansi dan keamanan via blockchain  
+## 🧪 Testing
 
----
+Testing dilakukan menggunakan **Mocha** dan **Chai**. Unit test memastikan:
+- Peminjaman dibuat hanya oleh pemilik NFT.
+- NFT berpindah ke smart contract saat pinjaman dibuat.
+- NFT kembali ke peminjam saat pinjaman dilunasi.
 
-## Cara Kerja
+## 🛠️ Kontrak dan Dependensi
 
-1. Peminjam mengunci NFT-nya ke smart contract sebagai jaminan.  
-2. Smart contract mengeluarkan pinjaman dalam bentuk crypto.  
-3. Peminjam membayar kembali pinjaman sesuai perjanjian.  
-4. Setelah lunas, NFT dilepaskan kembali ke peminjam.  
-5. Jika gagal bayar, NFT bisa dijual oleh pemberi pinjaman sesuai aturan.
+Kontrak utama:
+- `NFTLending.sol` — kontrak pinjaman NFT berbasis ERC721.
 
-## Teknologi
+Dependensi:
+- OpenZeppelin Contracts
+- Hardhat
+- Ethers.js
 
-- Solidity (Smart Contract Ethereum)  
-- Web3.js / Ethers.js (Frontend interaction)  
-- Hardhat / Truffle (Development & Testing)  
-- React / Next.js (Frontend, opsional)  
-- IPFS (Untuk metadata NFT, opsional)
-
----
-
-## Kontribusi
-
-Semua kontribusi sangat diterima!  
-Silakan buat pull request atau issues jika ada fitur atau perbaikan.
-
----
-
-## Lisensi
+## 📄 Lisensi
 
 MIT License
-
 ---
 
 ## ☕ Dukung aku agar tetap waras menulis script tengah malam...
